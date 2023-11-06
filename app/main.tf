@@ -10,13 +10,13 @@ terraform {
   }
 }
 
-module "sgmodule" {
-  source = "../modules/sgmodule"
+module "security_group" {
+  source = "../modules/security_group"
   sg_name = "app-sg"
 }
 
-module "ec2module" {
-  source = "../modules/ec2module"
+module "ec2_instance" {
+  source = "../modules/ec2_instance"
   instancetype = "t2.micro"
   aws_common_tag = {
     Name = "ec2-dev-abdelhad"
@@ -24,13 +24,13 @@ module "ec2module" {
   security_group_name = "app-sg"
 }
 
-module "eipmodule" {
-  source = "../modules/eipmodule"
-  instance_id = module.ec2module.ec2_id
+module "public_ip" {
+  source = "../modules/public_ip"
+  instance_id = module.ec2_instance.ec2_id
 }
 
-module "ebsmodule" {
-  source = "../modules/ebsmodule"
+module "ebs_volume" {
+  source = "../modules/ebs_volume"
   ebs_size = 10
 }
 

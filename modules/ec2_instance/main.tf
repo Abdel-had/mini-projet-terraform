@@ -44,7 +44,3 @@ resource "aws_instance" "myec2" {
     delete_on_termination = true
   }
 }
-
-output "ec2_id" {
-  value = aws_instance.myec2.id
-}
