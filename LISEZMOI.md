@@ -11,6 +11,8 @@ LinkedIn : https://www.linkedin.com/in/abdel-had-hanami/
 ---
 # Infrastructure as Code avec Terraform
 
+<img width="1200" alt="Terraform" src="https://github.com/Abdel-had/mini-projet-terraform/assets/101605739/890fb4c0-f3ad-4d91-b169-486369a47e5a">
+
 Ce projet utilise Terraform pour déployer une application web sur AWS, en provisionnant une instance EC2 avec Ubuntu Bionic, un volume EBS, une adresse IP publique et un groupe de sécurité.
 
 ## Structure du Projet
